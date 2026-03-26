@@ -9,6 +9,7 @@ export function Hero() {
   const sublineRef = useRef<HTMLParagraphElement>(null)
   const ctaRef = useRef<HTMLDivElement>(null)
   const visualRef = useRef<HTMLDivElement>(null)
+  const highlightRef = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
@@ -17,6 +18,14 @@ export function Hero() {
       .fromTo(sublineRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.5')
       .fromTo(ctaRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6 }, '-=0.4')
       .fromTo(visualRef.current, { opacity: 0, scale: 0.8, rotate: -10 }, { opacity: 1, scale: 1, rotate: 0, duration: 1.2 }, '-=1')
+
+    if (highlightRef.current) {
+      tl.fromTo(highlightRef.current,
+        { scaleX: 0 },
+        { scaleX: 1, duration: 0.8, ease: 'power2.inOut' },
+        '-=0.6'
+      )
+    }
 
     return () => { tl.kill() }
   }, [])
@@ -35,7 +44,21 @@ export function Hero() {
 
             <h1 ref={headlineRef} className="text-display text-[var(--color-neutral-900)]">
               Kommunikation,<br />
-              <span className="whitespace-nowrap">die <span className="text-[var(--color-primary)]">bee</span><span className="tracking-[-0.04em]">_</span>geistert.</span>
+              <span className="whitespace-nowrap">
+                die{' '}
+                <span className="relative inline-block">
+                  <span
+                    ref={highlightRef}
+                    className="absolute inset-0 -inset-x-[0.15em] bg-[var(--color-primary)]/20 rounded-[4px] origin-left"
+                    style={{ transform: 'scaleX(0)' }}
+                  />
+                  <span className="relative">
+                    <span className="text-[var(--color-primary)]">bee</span>
+                    <span className="inline-block w-[0.55em] border-b-[3px] border-[var(--color-neutral-900)] translate-y-[0.05em]" />
+                    geistert.
+                  </span>
+                </span>
+              </span>
             </h1>
 
             <p ref={sublineRef} className="text-body mt-8 max-w-[520px] text-[clamp(17px,1.3vw,20px)]">
