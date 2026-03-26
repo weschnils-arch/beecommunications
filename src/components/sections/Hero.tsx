@@ -35,7 +35,7 @@ export function Hero() {
 
             <h1 ref={headlineRef} className="text-display text-[var(--color-neutral-900)]">
               Kommunikation,<br />
-              <span className="whitespace-nowrap">die <span className="text-[var(--color-primary)]">bee</span><span className="tracking-[-0.08em]">_</span>geistert.</span>
+              <span className="whitespace-nowrap">die <span className="text-[var(--color-primary)]">bee</span><span className="tracking-[-0.04em]">_</span>geistert.</span>
             </h1>
 
             <p ref={sublineRef} className="text-body mt-8 max-w-[520px] text-[clamp(17px,1.3vw,20px)]">
