@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
 import { faqItems, siteConfig } from '../../data/content'
-import beeIcon from '../../assets/images/bee-icon.webp'
 import feedbackRegeln from '../../assets/images/feedback-regeln.webp'
 
 export function TeamCheckPage() {

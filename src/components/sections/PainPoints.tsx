@@ -1,7 +1,7 @@
 import { useScrollReveal } from '../../hooks/useScrollReveal'
 import { painPoints } from '../../data/content'
 
-const icons: Record<string, JSX.Element> = {
+const icons: Record<string, React.ReactNode> = {
   clock: (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="1.5" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
   ),

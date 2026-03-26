@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import beeIcon from '../../assets/images/bee-icon.webp'
-import feedbackRegeln from '../../assets/images/feedback-regeln.webp'
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null)
