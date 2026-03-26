@@ -15,7 +15,7 @@ export function MethodenPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-primary-light)]/30 to-transparent h-[60%]" />
         <div className="container-main relative z-10">
           <p className="text-label mb-4">Methoden & Modelle</p>
-          <h1 className="text-display text-[var(--color-neutral-900)] !text-[clamp(40px,6vw,80px)]">
+          <h1 className="text-display text-[var(--color-neutral-900)] !text-[clamp(28px,6vw,80px)]">
             Werkzeuge, die wirken.
           </h1>
           <p className="text-body mt-6 max-w-[640px] text-[clamp(17px,1.3vw,20px)]">

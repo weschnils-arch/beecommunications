@@ -16,7 +16,7 @@ export function UeberMichPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div ref={bioRef}>
               <p className="text-label mb-4">Über mich</p>
-              <h1 className="text-display text-[var(--color-neutral-900)] !text-[clamp(40px,6vw,72px)]">
+              <h1 className="text-display text-[var(--color-neutral-900)] !text-[clamp(28px,6vw,72px)]">
                 Gerlinde Oberndorfer
               </h1>
               <p className="text-[var(--color-primary-dark)] text-[18px] mt-2 mb-6 font-medium">

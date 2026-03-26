@@ -44,7 +44,7 @@ export function Hero() {
 
             <h1 ref={headlineRef} className="text-display text-[var(--color-neutral-900)]">
               Kommunikation,<br />
-              <span className="whitespace-nowrap">
+              <span className="whitespace-nowrap md:whitespace-normal lg:whitespace-nowrap">
                 die{' '}
                 <span className="relative inline-block">
                   <span

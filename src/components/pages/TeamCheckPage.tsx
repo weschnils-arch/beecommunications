@@ -18,7 +18,7 @@ export function TeamCheckPage() {
         <div className="container-main relative z-10">
           <div ref={heroRef} className="max-w-[760px] mx-auto text-center">
             <p className="text-label mb-6">Kostenloser Team-Kommunikations-Check</p>
-            <h1 className="text-display text-[var(--color-neutral-900)] !text-[clamp(36px,6vw,80px)]">
+            <h1 className="text-display text-[var(--color-neutral-900)] !text-[clamp(26px,6vw,80px)]">
               Wie gut kommuniziert Ihr Team wirklich?
             </h1>
             <p className="text-body mt-8 text-[clamp(17px,1.3vw,20px)] max-w-[600px] mx-auto">

@@ -35,7 +35,7 @@ function ServicePageContent({ service, relatedCase }: {
               Alle Leistungen
             </Link>
             <p className="text-[14px] font-medium text-[var(--color-primary-dark)] mb-3">{service.subtitle}</p>
-            <h1 className="text-display text-[var(--color-neutral-900)] !text-[clamp(40px,6vw,80px)]">
+            <h1 className="text-display text-[var(--color-neutral-900)] !text-[clamp(28px,6vw,80px)]">
               {service.title}
             </h1>
             <p className="text-body mt-6 text-[clamp(17px,1.3vw,20px)] max-w-[640px]">
@@ -144,7 +144,7 @@ export function ServicesOverview() {
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-primary-light)]/30 to-transparent h-[60%]" />
         <div className="container-main relative z-10">
           <p className="text-label mb-4">Leistungen</p>
-          <h1 className="text-display text-[var(--color-neutral-900)] !text-[clamp(40px,6vw,80px)]">
+          <h1 className="text-display text-[var(--color-neutral-900)] !text-[clamp(28px,6vw,80px)]">
             Kommunikation, die wirkt.
           </h1>
           <p className="text-body mt-6 max-w-[600px] text-[clamp(17px,1.3vw,20px)]">
