@@ -44,10 +44,13 @@ export function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || isMobileOpen
-          ? 'bg-[var(--color-bg)]/95 backdrop-blur-md shadow-[0_1px_0_var(--color-neutral-200)]'
-          : 'bg-transparent'
+        isMobileOpen
+          ? 'shadow-[0_1px_0_var(--color-neutral-200)]'
+          : isScrolled
+            ? 'backdrop-blur-md shadow-[0_1px_0_var(--color-neutral-200)]'
+            : 'bg-transparent'
       }`}
+      style={isMobileOpen ? { backgroundColor: '#FEFDFB' } : isScrolled ? { backgroundColor: 'rgba(254,253,251,0.95)' } : undefined}
     >
       <div className="container-main flex items-center justify-between h-[72px] lg:h-[80px]">
         <Link to="/" className="relative z-50 flex-shrink-0">
