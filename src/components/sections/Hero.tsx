@@ -42,8 +42,8 @@ export function Hero() {
           <div>
             <p className="text-label mb-6">Teamkommunikation & Organisationsentwicklung</p>
 
-            <h1 ref={headlineRef} className="text-display text-[var(--color-neutral-900)]">
-              Kommunikation,<br />
+            <h1 ref={headlineRef} className="text-display text-[var(--color-neutral-900)]" style={{ hyphens: 'none' }}>
+              <span className="lg:whitespace-nowrap">Kommunikation,</span><br />
               <span className="whitespace-nowrap md:whitespace-normal lg:whitespace-nowrap">
                 die{' '}
                 <span className="relative inline-block">
