@@ -24,14 +24,12 @@ export function ServicesGrid() {
             <Link
               key={service.slug}
               to={`/leistungen/${service.slug}`}
-              className={`group relative rounded-2xl overflow-hidden transition-all duration-400 hover:shadow-xl hover:-translate-y-1 ${
-                i === 0 ? 'md:row-span-2' : ''
-              }`}
+              className="group relative rounded-2xl overflow-hidden transition-all duration-400 hover:shadow-xl hover:-translate-y-1"
             >
-              <div className={`p-8 lg:p-10 h-full ${
+              <div className={`p-8 lg:p-10 h-full flex flex-col ${
                 i === 0
-                  ? 'bg-[var(--color-neutral-900)] text-white md:min-h-[400px] flex flex-col md:justify-end'
-                  : 'bg-[var(--color-neutral-50)] md:min-h-[200px] flex flex-col md:justify-end'
+                  ? 'bg-[var(--color-neutral-900)] text-white'
+                  : 'bg-[var(--color-neutral-50)]'
               }`}>
                 {i === 0 && (
                   <div className="absolute top-0 right-0 w-[200px] h-[200px] rounded-full bg-[var(--color-primary)] opacity-10 blur-[80px]" />
