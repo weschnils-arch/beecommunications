@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
-import { useLenis } from '../../hooks/useLenis'
+import { useLenis, getLenis } from '../../hooks/useLenis'
 import { siteConfig } from '../../data/content'
 import logoFull from '../../assets/images/logo-full.webp'
 
@@ -9,7 +9,12 @@ export function TeamCheckLayout() {
   const { pathname } = useLocation()
 
   useEffect(() => {
-    window.scrollTo(0, 0)
+    const lenis = getLenis()
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true })
+    } else {
+      window.scrollTo({ top: 0, behavior: 'instant' })
+    }
   }, [pathname])
 
   return (

@@ -2,15 +2,19 @@ import { Outlet, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import { Navbar } from './Navbar'
 import { Footer } from './Footer'
-import { useLenis } from '../../hooks/useLenis'
+import { useLenis, getLenis } from '../../hooks/useLenis'
 
 export function Layout() {
   useLenis()
   const { pathname } = useLocation()
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' })
-    document.documentElement.scrollTop = 0
+    const lenis = getLenis()
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true })
+    } else {
+      window.scrollTo({ top: 0, behavior: 'instant' })
+    }
   }, [pathname])
 
   return (

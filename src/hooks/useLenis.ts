@@ -1,11 +1,19 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import Lenis from '@studio-freight/lenis'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
+let lenisInstance: Lenis | null = null
+
+export function getLenis() {
+  return lenisInstance
+}
+
 export function useLenis() {
+  const rafRef = useRef<((time: number) => void) | null>(null)
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -13,17 +21,18 @@ export function useLenis() {
       smoothWheel: true,
     })
 
+    lenisInstance = lenis
     lenis.on('scroll', ScrollTrigger.update)
 
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000)
-    })
-
+    const raf = (time: number) => { lenis.raf(time * 1000) }
+    rafRef.current = raf
+    gsap.ticker.add(raf)
     gsap.ticker.lagSmoothing(0)
 
     return () => {
+      lenisInstance = null
       lenis.destroy()
-      gsap.ticker.remove(lenis.raf)
+      if (rafRef.current) gsap.ticker.remove(rafRef.current)
     }
   }, [])
 }
