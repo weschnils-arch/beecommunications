@@ -19,7 +19,7 @@ export function ServicesGrid() {
           </p>
         </div>
 
-        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
           {services.map((service, i) => (
             <Link
               key={service.slug}
@@ -30,8 +30,8 @@ export function ServicesGrid() {
             >
               <div className={`p-8 lg:p-10 h-full ${
                 i === 0
-                  ? 'bg-[var(--color-neutral-900)] text-white md:min-h-[400px] flex flex-col justify-end'
-                  : 'bg-[var(--color-neutral-50)] md:min-h-[200px] flex flex-col justify-end'
+                  ? 'bg-[var(--color-neutral-900)] text-white md:min-h-[400px] flex flex-col md:justify-end'
+                  : 'bg-[var(--color-neutral-50)] md:min-h-[200px] flex flex-col md:justify-end'
               }`}>
                 {i === 0 && (
                   <div className="absolute top-0 right-0 w-[200px] h-[200px] rounded-full bg-[var(--color-primary)] opacity-10 blur-[80px]" />
