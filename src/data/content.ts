@@ -139,7 +139,7 @@ export const stats = [
   { value: 20, suffix: '+', label: 'Jahre Erfahrung in Unternehmenskommunikation' },
   { value: 100, suffix: '+', label: 'Workshops & Teamklausuren durchgeführt' },
   { value: 9, suffix: '', label: 'Jahre bei BNP Paribas — Interne Kommunikation' },
-  { value: 2019, suffix: '', label: 'Gründung Bee Communications' },
+  { value: 2019, suffix: '', label: 'Gründung Bee Communications', startFrom: 2010 },
 ]
 
 export const testimonials = [

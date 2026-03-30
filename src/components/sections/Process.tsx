@@ -20,7 +20,7 @@ export function Process() {
           </p>
         </div>
 
-        <div ref={stepsRef} className="grid grid-cols-1 md:grid-cols-5 gap-6 lg:gap-4">
+        <div ref={stepsRef} className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-4">
           {processSteps.map((step, i) => (
             <div key={step.number} className="relative group">
               <div className="bg-[var(--color-bg)] rounded-xl p-6 lg:p-8 h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
@@ -36,7 +36,7 @@ export function Process() {
               </div>
 
               {i < processSteps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-3 w-6 text-[var(--color-neutral-200)] z-10">
+                <div className="hidden lg:block absolute top-1/2 -right-3 w-6 text-[var(--color-neutral-200)] z-10">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M9 6l6 6-6 6"/></svg>
                 </div>
               )}

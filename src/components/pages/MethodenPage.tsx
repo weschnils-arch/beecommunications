@@ -1,9 +1,11 @@
 import { useScrollReveal } from '../../hooks/useScrollReveal'
+import { usePageTitle } from '../../hooks/usePageTitle'
 import { methods, workshops } from '../../data/content'
 import { CtaSection } from '../sections/CtaSection'
 import workshopsImg from '../../assets/images/workshops-overview.webp'
 
 export function MethodenPage() {
+  usePageTitle('Methoden & Modelle')
   const gridRef = useScrollReveal<HTMLDivElement>({ direction: 'up', stagger: 0.08 })
   const wsRef = useScrollReveal<HTMLDivElement>({ direction: 'up', stagger: 0.08 })
 

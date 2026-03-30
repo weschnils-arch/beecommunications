@@ -1,10 +1,14 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
+import { usePageTitle } from '../../hooks/usePageTitle'
 import { siteConfig } from '../../data/content'
 
 export function KontaktPage() {
   const formRef = useScrollReveal<HTMLDivElement>({ direction: 'up' })
   const [submitted, setSubmitted] = useState(false)
+
+  usePageTitle('Kontakt')
 
   return (
     <>
@@ -134,10 +138,10 @@ export function KontaktPage() {
                 <p className="text-[14px] text-[var(--color-neutral-700)] leading-relaxed mb-4">
                   30 Minuten, kostenlos, auf den Punkt. Erste Einschätzung Ihrer Team-Kommunikation.
                 </p>
-                <a href="/team-check" className="text-[14px] font-semibold text-[var(--color-primary-dark)] inline-flex items-center gap-2 hover:gap-3 transition-all">
+                <Link to="/team-check" className="text-[14px] font-semibold text-[var(--color-primary-dark)] inline-flex items-center gap-2 hover:gap-3 transition-all">
                   Zum Team-Check
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

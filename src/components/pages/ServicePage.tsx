@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
+import { usePageTitle } from '../../hooks/usePageTitle'
 import { services, caseStudies } from '../../data/content'
 
 export function ServicePage() {
@@ -19,6 +20,7 @@ function ServicePageContent({ service, relatedCase }: {
   service: typeof services[0]
   relatedCase: typeof caseStudies[0]
 }) {
+  usePageTitle(service.title)
   const heroRef = useScrollReveal<HTMLDivElement>({ direction: 'up' })
   const painRef = useScrollReveal<HTMLDivElement>({ direction: 'up', stagger: 0.1 })
   const approachRef = useScrollReveal<HTMLDivElement>({ direction: 'up' })
@@ -136,6 +138,7 @@ function ServicePageContent({ service, relatedCase }: {
 }
 
 export function ServicesOverview() {
+  usePageTitle('Leistungen')
   const ref = useScrollReveal<HTMLDivElement>({ direction: 'up', stagger: 0.1 })
 
   return (

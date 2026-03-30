@@ -1,3 +1,4 @@
+import { usePageTitle } from '../../hooks/usePageTitle'
 import { Hero } from '../sections/Hero'
 import { PainPoints } from '../sections/PainPoints'
 import { SolutionBridge } from '../sections/SolutionBridge'
@@ -17,6 +18,7 @@ import teamCollab from '../../assets/images/team-collab.webp'
 import teamDiscussion from '../../assets/images/team-discussion.webp'
 
 export function HomePage() {
+  usePageTitle('')
   return (
     <>
       <Hero />

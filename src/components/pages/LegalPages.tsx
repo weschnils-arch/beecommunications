@@ -1,6 +1,8 @@
 import { siteConfig } from '../../data/content'
+import { usePageTitle } from '../../hooks/usePageTitle'
 
 export function ImpressumPage() {
+  usePageTitle('Impressum')
   return (
     <section className="pt-[120px] lg:pt-[140px] section-padding">
       <div className="container-narrow">
@@ -40,6 +42,7 @@ export function ImpressumPage() {
 }
 
 export function DatenschutzPage() {
+  usePageTitle('Datenschutz')
   return (
     <section className="pt-[120px] lg:pt-[140px] section-padding">
       <div className="container-narrow">

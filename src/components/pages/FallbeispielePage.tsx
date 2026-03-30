@@ -1,8 +1,10 @@
 import { useScrollReveal } from '../../hooks/useScrollReveal'
+import { usePageTitle } from '../../hooks/usePageTitle'
 import { caseStudies } from '../../data/content'
 import { CtaSection } from '../sections/CtaSection'
 
 export function FallbeispielePage() {
+  usePageTitle('Fallbeispiele')
   const ref = useScrollReveal<HTMLDivElement>({ direction: 'up', stagger: 0.15 })
 
   return (

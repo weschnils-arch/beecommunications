@@ -1,8 +1,8 @@
 import { stats } from '../../data/content'
 import { useCountUp } from '../../hooks/useCountUp'
 
-function StatItem({ value, suffix, label }: { value: number; suffix: string; label: string }) {
-  const { count, ref } = useCountUp(value)
+function StatItem({ value, suffix, label, startFrom = 0 }: { value: number; suffix: string; label: string; startFrom?: number }) {
+  const { count, ref } = useCountUp(value, 2, startFrom)
 
   return (
     <div ref={ref} className="text-center">

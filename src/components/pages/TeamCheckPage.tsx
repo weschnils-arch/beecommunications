@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
-import { faqItems, siteConfig } from '../../data/content'
+import { usePageTitle } from '../../hooks/usePageTitle'
+import { faqItems, testimonials, siteConfig } from '../../data/content'
 import feedbackRegeln from '../../assets/images/feedback-regeln.webp'
 
 export function TeamCheckPage() {
+  usePageTitle('Team-Kommunikations-Check')
   const heroRef = useScrollReveal<HTMLDivElement>({ direction: 'up' })
   const offerRef = useScrollReveal<HTMLDivElement>({ direction: 'up' })
   const [submitted, setSubmitted] = useState(false)
@@ -104,6 +106,21 @@ export function TeamCheckPage() {
       </section>
 
       <section className="section-padding">
+        <div className="container-main">
+          <div className="max-w-[640px] mx-auto text-center">
+            <svg className="w-10 h-10 text-[var(--color-primary)] opacity-30 mx-auto mb-6" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <blockquote className="text-[clamp(18px,2.5vw,24px)] font-['DM_Serif_Display',Georgia,serif] leading-relaxed text-[var(--color-neutral-900)] mb-6">
+              {testimonials[0].quote}
+            </blockquote>
+            <p className="text-[15px] font-semibold text-[var(--color-neutral-900)]">{testimonials[0].author}</p>
+            <p className="text-[14px] text-[var(--color-neutral-700)] mt-1">{testimonials[0].company}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-[var(--color-neutral-50)]">
         <div className="container-main">
           <div className="max-w-[640px] mx-auto">
             <h2 className="text-h2 text-[var(--color-neutral-900)] text-center mb-10">Häufige Fragen</h2>

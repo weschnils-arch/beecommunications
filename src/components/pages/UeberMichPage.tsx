@@ -1,9 +1,11 @@
 import { useScrollReveal } from '../../hooks/useScrollReveal'
+import { usePageTitle } from '../../hooks/usePageTitle'
 import { siteConfig, credentials } from '../../data/content'
 import { CtaSection } from '../sections/CtaSection'
 import feedbackRegeln from '../../assets/images/feedback-regeln.webp'
 
 export function UeberMichPage() {
+  usePageTitle('Über mich')
   const bioRef = useScrollReveal<HTMLDivElement>({ direction: 'up' })
   const storyRef = useScrollReveal<HTMLDivElement>({ direction: 'up' })
   const credRef = useScrollReveal<HTMLDivElement>({ direction: 'up', stagger: 0.08 })
