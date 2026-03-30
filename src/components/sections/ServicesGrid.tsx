@@ -28,10 +28,10 @@ export function ServicesGrid() {
                 i === 0 ? 'md:row-span-2' : ''
               }`}
             >
-              <div className={`p-8 lg:p-10 ${
+              <div className={`p-8 lg:p-10 h-full ${
                 i === 0
-                  ? 'bg-[var(--color-neutral-900)] text-white min-h-[400px] flex flex-col justify-end'
-                  : 'bg-[var(--color-neutral-50)] min-h-[200px] flex flex-col justify-end'
+                  ? 'bg-[var(--color-neutral-900)] text-white md:min-h-[400px] flex flex-col justify-end'
+                  : 'bg-[var(--color-neutral-50)] md:min-h-[200px] flex flex-col justify-end'
               }`}>
                 {i === 0 && (
                   <div className="absolute top-0 right-0 w-[200px] h-[200px] rounded-full bg-[var(--color-primary)] opacity-10 blur-[80px]" />
